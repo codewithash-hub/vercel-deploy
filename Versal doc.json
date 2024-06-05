@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "todo/wsgi.py",
+        "use": "@versal/python",
+        "config": {"maxLambdaSize": "15mb", "runtime": "python3.12"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*",
+            "dest": "todo/wsgi.py"
+        }
+    ]
+}
